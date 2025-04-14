@@ -1,0 +1,6 @@
+src/
+*.scss
+webpack.config.js
+.gitignore
+.eslintrc
+.babelrc

@@ -1,0 +1,34 @@
+# Thư mục chứa các thư viện npm
+node_modules/
+
+# Thư mục build/output
+dist/
+
+# File log hoặc file tạm
+*.log
+*.log.*
+npm-debug.log*
+
+# File cấu hình môi trường (nếu có)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# File tạm của editor hoặc hệ thống
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# File coverage (nếu bạn chạy test)
+coverage/
+
+# File biên dịch tạm của Webpack/Babel (nếu có)
+*.bundle.js
+*.map
+
+# File cá nhân (nếu có)
+.vscode/
+.idea/

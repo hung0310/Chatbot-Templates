@@ -1,0 +1,37 @@
+$breakpoint-xxs: 359px;
+$breakpoint-xs: 480px;
+$breakpoint-sm: 575px; 
+$breakpoint-md: 767px; 
+$breakpoint-lg: 991px; 
+$breakpoint-xl: 1024px; 
+$breakpoint-xxl: 1199px;
+$breakpoint-xxxl: 1399px;
+$breakpoint-xxxxl: 1540px;
+
+// Mixin for media queries (combine for efficiency)
+// Mixin for media queries
+@mixin respond-to($min: null, $max: null) {
+  @if $min ==null and $max !=null {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else if $min !=null and $max ==null {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else if $min !=null and $max !=null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $lines;
+}
